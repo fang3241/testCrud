@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-button slot="start" routerLink="/dashboard">
+      <ion-icon name="arrow-back"></ion-icon>
+    </ion-button>
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-slide>
+    <div class="contaier-login">
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <h1>Login</h1>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-list>
+              <ion-item>
+                <ion-icon name="mail" class="icon-login"></ion-icon>
+                <ion-input
+                  name="user"
+                  type="text"
+                  required
+                  placeholder="Username"
+                  [(ngModel)]="username"
+                ></ion-input>
+              </ion-item>
+              <br />
+              <ion-item>
+                <ion-icon name="lock-closed" class="icon-login"></ion-icon>
+                <ion-input
+                  name="password"
+                  type="password"
+                  required
+                  placeholder="Password"
+                  [(ngModel)]="password"
+                ></ion-input>
+              </ion-item>
+            </ion-list>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-button type="submit" fill="solid" (click)="login()" expand="full">
+              Enter
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+  </ion-slide>
+</ion-content>
+   

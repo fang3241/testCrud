@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-button slot="start" (click)="logout()">
+      <ion-icon name="log-out-outline"></ion-icon>
+    </ion-button>
+  
+    <ion-title>adminpage</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Daftar Nama</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item *ngFor="let tamu of Tamu">
+          <ion-label>{{ tamu.id_tamu }} - {{ tamu.nama }}</ion-label>
+          <ion-button expand="block" (click)="toEdit(tamu.id_tamu)">Edit</ion-button>
+          <ion-button expand="block" (click)="deleteTamu(tamu.id_tamu)">Delete</ion-button>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
